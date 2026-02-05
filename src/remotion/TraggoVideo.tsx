@@ -21,6 +21,7 @@ const { fontFamily } = loadFont("normal", {
 const C = {
   orange: "#F97316",
   orangeGlow: "#FB923C",
+  teal: "#0D9488",
   dark: "#0A0A0A",
   darkCard: "#161616",
   white: "#FFFFFF",
@@ -36,16 +37,16 @@ const C = {
 
 // ─── Timing (frames at 30fps) ──────────────────────────────
 const T = {
-  HOOK: { start: 0, dur: 180 },
-  PAIN: { start: 180, dur: 300 },
-  REVEAL: { start: 480, dur: 120 },
-  DASHBOARD: { start: 600, dur: 390 },
-  MOBILE: { start: 990, dur: 240 },
-  HOW: { start: 1230, dur: 270 },
-  CTA: { start: 1500, dur: 300 },
+  HOOK: { start: 0, dur: 175 },
+  PAIN: { start: 175, dur: 405 },
+  REVEAL: { start: 580, dur: 130 },
+  DASHBOARD: { start: 710, dur: 425 },
+  MOBILE: { start: 1135, dur: 215 },
+  HOW: { start: 1350, dur: 300 },
+  CTA: { start: 1650, dur: 330 },
 };
 
-// 60s at 30fps = 1800 total frames
+// 66s at 30fps = 1980 total frames
 
 // ─── Helpers ────────────────────────────────────────────────
 const ease = (t: number) =>
@@ -448,8 +449,7 @@ function SceneReveal() {
             letterSpacing: -2,
           }}
         >
-          GiG
-          <span style={{ color: C.orange }}> Scheduler</span>
+          Tra<span style={{ color: C.teal }}>gg</span>o
         </span>
       </FadeIn>
 
@@ -542,7 +542,7 @@ function SceneDashboard() {
         <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 32, padding: "0 8px" }}>
           <Img src={staticFile("logo-white.svg")} style={{ width: 32, height: 32 }} />
           <span style={{ color: C.white, fontSize: 20, fontWeight: 700 }}>
-            GiG<span style={{ color: C.orange }}>Scheduler</span>
+            Tra<span style={{ color: C.teal }}>gg</span>o
           </span>
         </div>
         {/* Nav items */}
@@ -1298,7 +1298,7 @@ function SceneCTA() {
       {/* Website */}
       <FadeIn delay={100} style={{ marginTop: 28 }}>
         <span style={{ color: C.muted, fontSize: 20 }}>
-          gigscheduler.com
+          traggo.io
         </span>
       </FadeIn>
 
@@ -1307,7 +1307,7 @@ function SceneCTA() {
         <div style={{ display: "flex", alignItems: "center", gap: 10, opacity: 0.4 }}>
           <Img src={staticFile("logo-white.svg")} style={{ width: 24, height: 24 }} />
           <span style={{ color: C.white, fontSize: 14, fontWeight: 600 }}>
-            GiG Scheduler
+            Tra<span style={{ color: C.teal }}>gg</span>o
           </span>
         </div>
       </FadeIn>
@@ -1318,7 +1318,7 @@ function SceneCTA() {
 // ═══════════════════════════════════════════════════════════
 //  MAIN COMPOSITION
 // ═══════════════════════════════════════════════════════════
-export const GigSchedulerVideo: React.FC = () => {
+export const TraggoVideo: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: C.dark, fontFamily }}>
       {/* Background ambient music */}
